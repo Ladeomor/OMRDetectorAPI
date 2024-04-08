@@ -8,4 +8,5 @@ import lombok.NoArgsConstructor;
 public class OMRDetectionResult {
     private String examNumber;
     private int totalScore;
+    private int questionCount;
 }

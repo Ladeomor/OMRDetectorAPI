@@ -38,6 +38,7 @@ public class OMRDetectionServiceImpl implements OMRDetectionService {
                     result.setTotalScore(script.TotalScore);
                     String examNumber = ((DataShadedArea) (script.getShadedAreas().get(8))).getData();
                     result.setExamNumber(examNumber);
+                    result.setQuestionCount(script.ShadedAreas.get(0).getNumberOfOptions() + script.ShadedAreas.get(1).getNumberOfOptions() + script.ShadedAreas.get(2).getNumberOfOptions() + script.ShadedAreas.get(3).getNumberOfOptions() + script.ShadedAreas.get(4).getNumberOfOptions() + script.ShadedAreas.get(5).getNumberOfOptions() + script.ShadedAreas.get(6).getNumberOfOptions() + script.ShadedAreas.get(7).getNumberOfOptions());
                     System.out.println("Total score: " + script.TotalScore + "/" + (script.ShadedAreas.get(0).getNumberOfOptions() + script.ShadedAreas.get(1).getNumberOfOptions() + script.ShadedAreas.get(2).getNumberOfOptions() + script.ShadedAreas.get(3).getNumberOfOptions() + script.ShadedAreas.get(4).getNumberOfOptions() + script.ShadedAreas.get(5).getNumberOfOptions() + script.ShadedAreas.get(6).getNumberOfOptions() + script.ShadedAreas.get(7).getNumberOfOptions()));
                     System.out.println("Exam no: " + ((DataShadedArea) (script.ShadedAreas.get(8))).data);
 //                    omrDetectionAlgo.display(script.BufferedImage);
